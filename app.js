@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-/* const date = require(`${__dirname}/date.js`); */
 const mongoose = require("mongoose");
 const app = express();
 const _ = require("lodash");
@@ -115,9 +114,11 @@ app.post("/delete", (req, res) => {
   }
 });
 
-app.get("/about", (req, res) => {
+/**
+ * A test with EJS
+ *  app.get("/about", (req, res) => {
   res.render("about");
-});
+}); */
 
 let port = process.env.PORT;
 if (port == null || port == "") {
