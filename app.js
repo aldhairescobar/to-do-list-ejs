@@ -1,16 +1,15 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const app = express();
 const _ = require("lodash");
 
-mongoose.connect(
-  "mongodb+srv://admin-aldhair:test123@cluster0.izcbl.mongodb.net/todolistDB",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+const url = process.env.ATLAS_MDB;
+mongoose.connect(url, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const itemsSchema = new mongoose.Schema({
   name: {
