@@ -114,7 +114,7 @@ app.post("/delete", (req, res) => {
 });
 
 /**
- * A test with EJS
+ * A test with EJS (how easy is to create reusable templates.)
  *  app.get("/about", (req, res) => {
   res.render("about");
 }); */
